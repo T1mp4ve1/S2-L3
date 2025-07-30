@@ -166,7 +166,7 @@ starWarsCharacters.forEach((person) => {
       eyeColor.red.push(person);
       break;
     case "blue-gray":
-      eyeColor.red.push(person);
+      eyeColor.blue_gray.push(person);
       break;
       default:
         console.log("Colore sconosciuto di:");
@@ -213,15 +213,25 @@ if (sumMass < 501) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
 }
 
+console.log("______________________");
+
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
-
+let RobotsInShip = [];
+for (let x = 0; x < starWarsCharacters.length; x++) {
+  if (starWarsCharacters[x].gender === "n/a") {
+    starWarsCharacters[x].gender = "robot";
+    RobotsInShip.push(starWarsCharacters[x])
+  }
+}
+console.log(RobotsInShip)
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
